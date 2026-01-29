@@ -1,4 +1,4 @@
-# Calcular la media de tres números pedidos por teclado
+#
 
 num_1 = int(input('Ingresa el primer número: '))
 
