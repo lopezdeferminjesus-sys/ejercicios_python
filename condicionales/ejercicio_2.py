@@ -1,5 +1,5 @@
 """
-//Algoritmo que pida un número y diga si es positivo, negativo o 0.
+Algoritmo que pida un número y diga si es positivo, negativo o 0.
 """
 
 num = int(input("Dime el número: "))
