@@ -1,4 +1,4 @@
-# Algoritmo que pida dos números e indique si el primero es mayor que el segundo.
+#Algoritmo que pida dos números e indique si el primero es mayor que el segundo.
 
 num1 = int(input("Dime el número 1: "))
 num2 = int(input("Dime el número 2: "))

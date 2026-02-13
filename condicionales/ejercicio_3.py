@@ -3,6 +3,7 @@
 num = int(input("Dime el número: "))
 
 if num % 2 == 0:
-    print("Es par")
+    print("Es Par")
 else:
-    print("Es impar")
+    print("Es Impar")
+

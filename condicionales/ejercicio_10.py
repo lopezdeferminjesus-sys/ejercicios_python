@@ -1,33 +1,37 @@
 """
-//Algoritmo que pida los puntos centrales x1,y1,x2,y2 y los radios r1,r2 de dos 
-//circunferencias y las clasifique en uno de estos estados:
+//Algoritmo que pida los puntos centrales x1,y1,x2,y2 y los radios r1,r2 de dos //circunferencias y las clasifique en uno de estos estados: 
 //exteriores
-//tangentes exteriores
-//secantes
-//tangentes interiores
-//interiores
+//tangentes exteriores 
+//secantes 
+//tangentes interiores 
+//interiores 
 //concéntricas
 """
 
-x1 = float(input("x1: "))
-y1 = float(input("y1: "))
-r1 = float(input("r1: "))
+x1 = float(input("Dime coordenada x primera circunferencia: "))
+y1 = float(input("Dime coordenada y primera circunferencia: "))
+r1 = float(input("Dime radio primera circunferencia: "))
 
-x2 = float(input("x2: "))
-y2 = float(input("y2: "))
-r2 = float(input("r2: "))
+x2 = float(input("Dime coordenada x segunda circunferencia: "))
+y2 = float(input("Dime coordenada y segunda circunferencia: "))
+r2 = float(input("Dime radio segunda circunferencia: "))
 
-distancia = ((x2 - x1) * 2 + (y2 - y1) * 2) ** 0.5
+distancia = ((x2 - x1)**2 + (y2 - y1)**2) ** 0.5
+
+if distancia > (r1 + r2):
+    print("Circunferencias exteriores")
+
+if distancia == (r1 + r2):
+    print("Circunferencias tangentes exteriores")
+
+if distancia < (r1 + r2) and distancia > abs(r1 - r2):
+    print("Circunferencias secantes")
+
+if distancia == abs(r1 - r2):
+    print("Circunferencias tangentes interiores")
+
+if distancia > 0 and distancia < abs(r1 - r2):
+    print("Circunferencias interiores")
 
 if distancia == 0:
-    print("Concéntricas")
-elif distancia > r1 + r2:
-    print("Exteriores")
-elif distancia == r1 + r2:
-    print("Tangentes exteriores")
-elif distancia > abs(r1 - r2):
-    print("Secantes")
-elif distancia == abs(r1 - r2):
-    print("Tangentes interiores")
-else:
-    print("Interiores")
+    print("Circunferencias concéntricas")
